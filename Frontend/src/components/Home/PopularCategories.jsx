@@ -8,6 +8,7 @@ import { TbAppsFilled } from "react-icons/tb";
 import { FaReact } from "react-icons/fa";
 import { GiArtificialIntelligence } from "react-icons/gi";
 import { IoGameController } from "react-icons/io5";
+import React from "react"
 
 const PopularCategories = () => {
   const categories = [

@@ -1,5 +1,6 @@
 import { FaMicrosoft, FaApple } from "react-icons/fa";
 import { SiTesla } from "react-icons/si";
+import React from "react"
 
 const PopularCompanies = () => {
   const companies = [

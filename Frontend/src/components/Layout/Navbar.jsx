@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../../main";
@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>
     <div className="container">
       <div className="logo">
-        <img src="/lm.png" alt="logo" />
+        <img src="/lms.png" alt="logo" />
       </div>
       <ul className={!show ? "menu" : "show-menu menu"}>
         <li>

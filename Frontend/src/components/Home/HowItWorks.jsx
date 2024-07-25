@@ -1,7 +1,7 @@
 import { FaUserPlus } from "react-icons/fa";
 import { MdFindInPage } from "react-icons/md";
 import { IoMdSend } from "react-icons/io";
-
+import React from "react"
 const HowItWorks = () => {
   return (
     <>
