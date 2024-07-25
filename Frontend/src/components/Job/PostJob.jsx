@@ -14,7 +14,7 @@ import Select from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
 import { Grid } from "@mui/material";
 import Textarea from '@mui/joy/Textarea';
-
+import React from "react";
 
 const PostJob = () => {
   const [title, setTitle] = useState("");
