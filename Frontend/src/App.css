@@ -1255,6 +1255,24 @@ nav {
   background: #0078d4;
   padding: 0 20px;
 }
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f1f3f6;
+}
+
+.nav-item span {
+  font-size: 14px; /* Adjust the size as needed */
+  margin-top: 5px;
+  color: #f1f3f6;
+}
+
+nav .menu li a:hover .nav-item span {
+  color: #000000; /* Match the hover color for the text */
+  transition: all 0.3s;
+}
+
 nav .container {
   max-width: 1500px;
   min-width: 1500px;
@@ -1263,8 +1281,8 @@ nav .container {
   justify-content: space-between;
 }
 nav .container .logo {
-  width: 140px;
-  height: 50px;
+  width: 150px;
+  height: 60px;
 }
 nav .container .logo img {
   width: 100%;
@@ -1300,7 +1318,7 @@ nav .menu li a {
   position: relative;
 }
 nav .menu li a:hover {
-  color: #2d5649;
+  color: #000000;
   transition: all 0.3s;
 }
 nav .menu li a::before {

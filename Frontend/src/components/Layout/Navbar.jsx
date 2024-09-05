@@ -33,42 +33,53 @@ const Navbar = () => {
     <nav className={isAuthorized ? "navbarShow" : "navbarHide"}>
     <div className="container">
       <div className="logo">
-        <img src="/lms.png" alt="logo" />
+        <img src="/hh.png" alt="logo" />
       </div>
       <ul className={!show ? "menu" : "show-menu menu"}>
-        <li>
-          <Link to={"/"} onClick={() => setShow(false)}>
-          <FaHome />
-          </Link>
-        </li>
-        <li>
-          <Link to={"/job/getall"} onClick={() => setShow(false)}>
-          <FaBriefcase />
-          </Link>
-        </li>
-        <li>
-          <Link to={"/applications/me"} onClick={() => setShow(false)}>
-            {user && user.role === "Employer"
-              ? <FaFileAlt />
-              : <FaRegClipboard />}
-          </Link>
-        </li>
-        {user && user.role === "Employer" ? (
-          <>
-            <li>
-              <Link to={"/job/post"} onClick={() => setShow(false)}>
-              <FaPlusSquare />
-              </Link>
-            </li>
-            <li>
-              <Link to={"/job/me"} onClick={() => setShow(false)}>
-              <FaList />
-              </Link>
-            </li>
-          </>
-        ) : (
-          <></>
-        )}
+      <li>
+  <Link to={"/"} onClick={() => setShow(false)}>
+    <div className="nav-item">
+      <FaHome />
+      <span>Home</span>
+    </div>
+  </Link>
+</li>
+<li>
+  <Link to={"/job/getall"} onClick={() => setShow(false)}>
+    <div className="nav-item">
+      <FaBriefcase />
+      <span>Jobs</span>
+    </div>
+  </Link>
+</li>
+<li>
+  <Link to={"/applications/me"} onClick={() => setShow(false)}>
+    <div className="nav-item">
+      {user && user.role === "Employer" ? <FaFileAlt /> : <FaRegClipboard />}
+      <span>{user && user.role === "Employer" ? "Applications" : "My Applications"}</span>
+    </div>
+  </Link>
+</li>
+{user && user.role === "Employer" && (
+  <>
+    <li>
+      <Link to={"/job/post"} onClick={() => setShow(false)}>
+        <div className="nav-item">
+          <FaPlusSquare />
+          <span>Post Job</span>
+        </div>
+      </Link>
+    </li>
+    <li>
+      <Link to={"/job/me"} onClick={() => setShow(false)}>
+        <div className="nav-item">
+          <FaList />
+          <span>My Jobs</span>
+        </div>
+      </Link>
+    </li>
+  </>
+)}
 
         <button onClick={handleLogout}>LOGOUT</button>
       </ul>
